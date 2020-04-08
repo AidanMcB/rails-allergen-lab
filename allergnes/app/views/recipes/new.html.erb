@@ -1,0 +1,8 @@
+<%= form_with ({ model: @recipe}) do |form| %>
+<label>Recipe Name: </label>
+    <%= form.text_field(:name) %>
+    <br>
+<label>Select a User</label>
+    <%= form.collection_select(:user_id, @users, :id, :name) %>
+    <%= form.submit("Submit") %>
+    <% end %>

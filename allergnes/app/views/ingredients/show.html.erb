@@ -1,0 +1,11 @@
+<%= form_with({model: @ingredient}) do |form| %>
+    <label>Ingredient Name: </label>
+    <h4><%= @ingredient.name %></h4>
+
+    <label> RECIPES </label>
+    <% @ingredient.recipes.each do |recipe| %>
+       <div><%=recipe.name%></div>
+    <%end%>
+    <br>
+
+<% end %>

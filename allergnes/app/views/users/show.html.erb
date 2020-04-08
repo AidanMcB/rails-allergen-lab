@@ -1,0 +1,11 @@
+<%= form_with({model: @user}) do |form| %>
+    <label>Name: </label>
+    <%= @user.name %>
+    <br>
+
+<form method = "POST" action = "/users/<%= @user.id %>">
+<input type = "hidden" name = "_method" value = "DELETE" />
+<input type = "submit" value = "Delete" />
+</form>
+
+<% end %>
